@@ -1,0 +1,20 @@
+Pin details:
+Vcc- pin 2
+Gnd-pin6
+Tx-pin 10
+Execute the following Command :
+sudo apt install python3-venv
+python3 -m venv myenv 
+source myenv/bin/activate 
+dt param=spi=on
+dtoverlay=pi3-disable-bt
+core_freq=250
+enable_vart=1
+force_turbo=1
+sudo systemctl stop serial-getty@ttyS0.service 
+sudo systemctl disable serial-getty@ttyS0.service 
+sudo systemctl enable serial-getty@ttyAMAO.service 
+sudo apt-get install minicom
+pip install pynmea2 -- break-system-packages 
+sudo cat /dev/ttyS0
+

@@ -1,0 +1,4 @@
+libcamera-hello
+libcamera-still -o image.jpg
+libcamera-vid -o video.h264 -t 10000
+

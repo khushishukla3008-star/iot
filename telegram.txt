@@ -1,0 +1,44 @@
+Telegram:
+Open telegram Search botfather 
+Give the following cmd: 
+/start
+/newbot
+Obtain token number
+sudo apt-get install python-pip
+sudo apt install python3-venv
+python3 -m venv myenv
+source myenv/bin/activate
+pip install telepot 
+pip install RPi.GPIO
+git clone https://github.com/salmanfarisvp/TelegramBot.git
+cd TelegramBot
+nano telegrambot.py
+Code changes write token number 
+Replace this:
+if command == 'on':
+   bot.sendMessage(chat_id, on(11))
+elif command =='off':
+   bot.sendMessage(chat_id, off(11))
+With this:
+if command == 'on':
+   on(11)
+   bot.sendMessage(chat_id, 'LED ON')
+
+elif command == 'off':
+   off(11)
+   bot.sendMessage(chat_id, 'LED OFF')
+And replace:
+bot = telepot.Bot('Bot Token')
+with:
+bot = telepot.Bot('YOUR_BOT_TOKEN')
+
+cmd: python telegrambot.py
+In your account /start 
+on off on off
+
+
+
+
+ReplyReply allForward
+Add reaction
+
